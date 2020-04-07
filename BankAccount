@@ -1,0 +1,32 @@
+public class BankAccount {
+
+	double balance; 
+
+	public void deposit(double amount) {  
+		balance = balance + amount;
+	}
+
+	/*
+      Withdraws money from the bank account.
+      Any amount of code can go inside a method
+      For example if we wanted to check to see if 'balance' was too low to support the withdrawal amount,
+      we could stop the withdrawal
+      @param amount the amount to withdraw
+	 */
+	public void withdraw(double amount) {   
+		balance = balance - amount;
+	}
+
+	/*
+      Gets the current balance of the bank account.
+      Notice there is no 'void' because the getBalance method returns the balance
+      However, since it is returning balance 'double' is indicated after public
+      A method that returns data is called an 'accessor' or 'getter'.
+      'getBalance' is a getter
+      @return the current balance
+	 */
+	public double getBalance()
+	{   
+		return balance;
+	}
+}
