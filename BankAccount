@@ -14,7 +14,12 @@ public class BankAccount {
       @param amount the amount to withdraw
 	 */
 	public void withdraw(double amount) {   
-		balance = balance - amount;
+		if (amount > balance) {
+			System.out.println("Insufficient Funds. A withdrawl of " + amount + " is too high.");
+		}
+		else {
+			balance = balance - amount;
+		}
 	}
 
 	/*
