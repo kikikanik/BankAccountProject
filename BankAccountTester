@@ -6,15 +6,22 @@ public class BankAccountTester
 		BankAccount harrysChecking = new BankAccount();
 
 		//This line calls the deposit method for harrysChecking
-		//Note the deposit is for $2000
 		harrysChecking.deposit(2000);
 
 		//This line calls the withdrawal method for harrysChecking
-		//Note the withdrawal is for $500
 		harrysChecking.withdraw(500);
 
 		//This line calls the getBalance method and prints it     
-		System.out.println(harrysChecking.getBalance());
-		System.out.println("Expected: 1500");      
+		System.out.println("Harry's Checking Balance: " + harrysChecking.getBalance());
+   
+		//creates new BankAccount Object called mySavings
+		BankAccount mySavings = new BankAccount();
+		mySavings.balance = 1000.00;
+		
+		//calls the withdraw method for mySavings
+		mySavings.withdraw(1001.00);
+		
+		System.out.println("Harry's Savings Account Balance: " + mySavings.getBalance());
+		
 	}
 }
